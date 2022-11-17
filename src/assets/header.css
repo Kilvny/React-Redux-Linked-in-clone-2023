@@ -1,0 +1,86 @@
+
+.header {
+    /* first two lines to make the header nav-bar sticks to the top of the page if you scroll */
+    position: sticky !important;
+    top:0 !important; 
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 0.1px solid lightgray;
+    width: 100%;
+    /* same as first comment */
+    z-index: 999 !important; 
+    background: white;
+    
+}
+.header-left {
+    display: flex;
+    justify-content: left;
+}
+
+.logo > img {
+    object-fit: contain; /* it will keep the aspect ratio when resize applied */
+    height: 36px;
+    margin-right: 8px;
+}
+
+.search-bar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: lighter;
+    color:gray;
+    height: 16px;
+    background: #eef3f8;
+    
+}
+
+.search-bar > input {
+    color: black;
+    outline: none;
+    border: none;
+    background: none;
+    width: 15rem;
+}
+
+
+.header-right {
+    display: flex;
+    justify-items: baseline;
+    height: 20px;
+}
+
+.header-right-right {
+    display: flex;
+    border-left: 0.01px solid lightgray;
+    /* padding: 0 !important;
+    margin: 0 !important; */
+    justify-items: baseline;
+    justify-content: center;
+    align-items: center ;
+}
+
+.header-right-right > span {
+    text-decoration: underline;
+    font-weight: 50;
+    font-size: 13px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    color: #794d0c;
+}
+
+.header-right-right > .container {
+    display: flex;
+    justify-items: baseline;
+    margin-left: 20px;
+}
+
+@media (max-width: 1024px) {
+    .search-bar{
+      display: none;
+    }
+  }
+

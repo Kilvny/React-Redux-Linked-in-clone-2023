@@ -1,0 +1,194 @@
+.sidebar {
+    top: 80px;
+    position: sticky;
+    flex: 0.2;
+    height: fit-content;
+    margin-top: 18px;
+    margin-left: 30px;
+}
+
+.profile {
+    display: grid;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.profile-top > img {
+    width: 100%;
+    margin-bottom: -30px;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+.profile-top {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    padding-bottom: 10px;
+    outline: 0.1px solid #F3F2EF;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.avatar {
+    width: 72px !important;
+    height: 72px !important;
+    outline: 0.1px solid white;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.profile-name {
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 10px;
+}
+.profile-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.profile-title {
+    font-weight: 300;
+    margin-top: -4px;
+}
+
+.profile-stats {
+    border-bottom: 0.1px solid #F3F2EF;
+
+}
+
+.profile-stat {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.profile-stat > p {
+    color: gray;
+    font-size: 13px;
+}
+
+.profile-stat-count {
+    color: #267ECC !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+}
+
+.profile-try-premium {
+    align-items: center;
+    text-align: left;
+    /* margin-left: 10px; */
+    /* font-weight: 200; */
+    font-size: 13px;
+    border-bottom: 0.1px solid #F3F2EF;
+    padding: 10px 0;
+
+}
+
+.profile-try-premium > p {
+    margin-left: 10px;
+    color: gray;
+
+}
+
+.profile-try-premium:hover , .profile-my-items:hover , .profile-stats:hover{
+    background-color: #F3F2EF;
+    cursor: pointer;
+    border-left: 1px solid white ;
+    border-right:1px solid white ;
+}
+
+.profile-try-premium > img {
+    display: inline;
+    width: 11px;
+    height: 11px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.profile-try-premium > span {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.profile-my-items {
+    display: flex;
+    padding: 5px;
+
+}
+
+.profile-my-items > span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-my-items > DropDown {
+    height: 11px !important;
+    width: 11px !important;
+}
+
+
+/* The Bottom of the sidebar */
+
+.sidebar-discover {
+    margin-top: 10px;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-items: center;
+    padding-bottom: 10px;
+    outline: 0.1px solid #F3F2EF;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-radius: 10px;
+    background: white;
+}
+
+.discover-groups , .discover-events , .discover-followed-hashtags  {
+    padding: 5px;
+    color: gray;
+    margin-left: 3px;
+}
+.discover-groups  > span, .discover-events  > span, .discover-followed-hashtags > span{
+    color: #267ECC ;
+    font-size: 13px;
+    font-weight: 600;
+}
+.discover-groups  > span:hover, .discover-events  > span:hover, .discover-followed-hashtags > span:hover ,.discover-more > span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.discover-events {
+    display:flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+.discover-events > .add-icon:hover {
+    background-color: #F3F2EF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.discover-more {
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    border-top: 1px solid #F3F2EF;
+    color: gray;
+}

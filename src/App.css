@@ -1,0 +1,11 @@
+.app {
+    background-color: #F3F2EF;
+    
+    height: 1024px;
+}
+
+.app-body {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
