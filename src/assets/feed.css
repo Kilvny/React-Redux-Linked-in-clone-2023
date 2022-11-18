@@ -1,0 +1,72 @@
+.feed {
+    flex: 0.48;
+    margin: 0 20px;
+}
+
+.create-post {
+    background: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.create-a-post {
+    display: flex;
+    margin-bottom: 12px;
+    /* border: 1.5px solid lightgray;
+    color: gray;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    margin-left: 8px; */
+}
+
+.create-a-post > form {
+    display: flex;
+    width: 100%;
+    margin-left: 8px;
+    border: 1.5px solid lightgray;
+    color: gray;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    margin-right: 8px;
+}
+
+.create-a-post > form > input {
+    border: none;
+    margin-left: 10px;
+    outline-width: 0;
+    flex:1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+.create-a-post > form > button {
+    display: none; /* Adds submit by enter functionality with button hidden :)  */
+}
+
+
+.avatar-sm {
+    width: 55px !important;
+    height: 55px !important;
+    outline: 0.1px solid white;
+    margin-left: 8px;
+}
+
+.create-post-icons {
+    display: flex;
+}
+
+.create-post-icons { 
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}

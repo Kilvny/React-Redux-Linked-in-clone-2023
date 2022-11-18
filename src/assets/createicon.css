@@ -1,0 +1,13 @@
+
+.create-icon {
+    display: flex;    
+    align-items: center !important;
+}
+
+.create-icon > h4 {
+    font-weight: 500;
+    font-size: 14px;
+    color: gray;
+    margin-left: 10px;
+    margin-bottom: 1px;
+}
