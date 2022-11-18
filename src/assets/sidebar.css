@@ -1,14 +1,13 @@
 .sidebar {
     top: 80px;
     position: sticky;
-    flex: 0.2;
+    flex: 0.22;
     height: fit-content;
-    margin-top: 18px;
+    /* margin-top: 18px; */
     margin-left: 30px;
 }
 
 .profile {
-    display: grid;
     background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -24,7 +23,7 @@
     height: 60px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    object-fit: cover;
+    object-fit:fill;
 }
 
 .profile-top {
