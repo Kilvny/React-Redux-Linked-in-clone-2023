@@ -2,6 +2,10 @@
 .create-icon {
     display: flex;    
     align-items: center !important;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 2px;
+
 }
 
 .create-icon > h4 {
@@ -9,5 +13,10 @@
     font-size: 14px;
     color: gray;
     margin-left: 10px;
-    margin-bottom: 1px;
+    margin-bottom: -1px;
 }
+
+.create-icon:hover {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}   
