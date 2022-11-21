@@ -16,34 +16,25 @@ import {
   query,
   where,
   orderBy,
+  setDoc,
+  doc,
 } from "firebase/firestore";
 // import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import {
-  FieldValue,
-  serverTimestamp,
-  setDoc,
-  Timestamp,
-  updateDoc,
-  onSnapshot,
-  getDocFromCache,
-} from "firebase/firestore";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
-import { doc } from "firebase/firestore";
-import { deepPurple } from "@mui/material/colors";
-import { onValue, ref } from "firebase/database";
 
 
 const Feed = () => {
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
   const [nextId, setNextId] = useState("0");
+  
   const addPost = (e) => {
     e.preventDefault();
 
-    if(input.trim() === '') {
-        return 
+    if (input.trim() === "") {
+      return;
     }
     const docData = {
       name: "mo",
@@ -57,26 +48,9 @@ const Feed = () => {
     setDoc(doc(db, "posts", nextId.toString()), docData);
     setNextId(parseInt(nextId) + 1);
     setInput("");
-  };
 
-  // const docRef = doc(db, "posts", "*");
-  // // const docSnap =  async () => {
-  // //     return await getDoc(docRef)
+};
 
-  // // };
-
-  //     const doc = async () => {
-  //         return await getDoc(docRef);
-
-  //     }
-  //     if (doc.exists()) {
-  //         console.log("Document data:", doc.data());
-  //       } else {
-  //         // doc.data() will be undefined in this case
-  //         console.log("No such document!");
-  //       }
-  // Document was found in the cache. If no cached document exists,
-  // an error will be returned to the 'catch' block below.
 
 
   const makeQuery = () => {
@@ -88,81 +62,23 @@ const Feed = () => {
       );
       return q
   }
-  // async function querySnapshot() {
-  //   const querySnapshot = await getDocs(q);
-  //   querySnapshot.forEach((doc) => {
-  //     // doc.data() is never undefined for query doc snapshots
-  //     console.log(doc.id, " => ", doc.data());
-  //     posts.push({id:nextId++, data:doc.data()})
-  //     console.log(posts,'posts length: ',posts.length)
+ 
+async function querySnapshot() {
+  const q = makeQuery();
+  const querySnapshot = await getDocs(q);
+  console.log(querySnapshot.docs[0].data().message);
+  setNextId(querySnapshot.docs.length);
+  setPosts(
+    querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      data: doc.data(),
+    }))
+  );
+}
 
-  //     // setPosts([
-  //     //   ...posts,
-  //     //   {
-  //     //     id: doc.id,
-  //     //     data: doc.data(),
-  //     //   },
-  //     // ]);
-  //   });
-  // }
-
-  // const snap = getDoc(doc(db, "posts", `Amr Taha`))
-
-  async function querySnapshot() {
-    const q = makeQuery()
-    const querySnapshot = await getDocs(q);
-    console.log(querySnapshot.docs[0].data().message);
-    setNextId(querySnapshot.docs.length)
-    setPosts(
-        querySnapshot.docs.map((doc) => ({
-            id:doc.id,
-            data:doc.data(),
-                    }))
-    
-        )
-        
-        
-    
-    // forEach((doc) => {
-    //   // doc.data() is never undefined for query doc snapshots
-    //   //   console.log(doc.id, " => ", doc.data());
-    //   //   !posts.includes({id:nextId, data:doc.data()})?
-    //   //   posts.push({id:nextId++, data:doc.data()}) :
-    //   //   console.log(posts,'posts length: ',posts.length)
-
-    //   let data = {
-    //     id: doc.id,
-    //     data: doc.data(),
-    //   };
-    //   if (data && !posts.includes(data.id)) {
-    //     setPosts((current) => [...current, data]);
-    //     console.log("psts now", posts);
-    //   }
-    // })
-    
-    ;
-  }
-
-  useEffect(() => {
+useEffect(() => {
     querySnapshot();
-    // console.log(posts,'posts length: ',posts.length)
-    // let db2 = collection(db,'posts').onSnapshot((snapshot)=>
-    // setPosts(
-    //     snapshot.docs.map((doc) => ({
-    //         id: doc.id,
-    //         data: doc.data()
-    //     }))
-    // ))
 
-    // snap.then((snap) => {
-    // if (snap.exists()) {
-    //     //   console.log(snap.data());
-    //       setPosts(snap.data())
-    //       console.log(posts)
-    //     } else {
-    //       console.log("No such document");
-    //     }
-    //   });
   }, [nextId]);
 
   return (
