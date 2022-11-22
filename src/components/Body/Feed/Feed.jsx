@@ -19,17 +19,17 @@ import {
   setDoc,
   doc,
 } from "firebase/firestore";
-// import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+
 
 
 const Feed = () => {
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
   const [nextId, setNextId] = useState("0");
-  
+
   const addPost = (e) => {
     e.preventDefault();
 

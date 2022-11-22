@@ -72,6 +72,11 @@
     color: #794d0c;
 }
 
+.header-right-right > span:hover {
+    cursor: pointer;
+}
+
+
 .header-right-right > .container {
     display: flex;
     justify-items: baseline;
