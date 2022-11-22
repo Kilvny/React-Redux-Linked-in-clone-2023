@@ -19,7 +19,6 @@ const Post = ({ name, job, message, avatarUrl}) => {
         </div>
         <div className="post-body">
             <p>{message}</p>
-            {/* <p>The best way to learn to code is to build stuff. ⚙️🛠🧰🪛🪚 With the right strategy, you can even do it for free! 🤑 Take a look at how I created an online personal finance app with nothing out of pocket. 😎</p> */}
             <div className="post-actions">
                 <div className="post-reaction">
                 <CreateIcon Icon={ThumbUpOffAltIcon} color='gray' title='Like'/>
