@@ -1,0 +1,53 @@
+.relative {
+    position: relative;
+    outline: none;
+    outline-style: none;
+}
+
+.abs {
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    /* outline: 1px solid gray; */
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px gray;
+    width: 230px !important;
+    height: 37px !important;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img-reaction {
+    height: 30px;
+    width: auto;
+    margin: 0 5px;
+}
+
+.small {
+    height: 20px !important;
+}
+
+
+.img-reaction:hover {
+    height: 40px;
+    width: auto;
+    overflow-y: visible;
+    position:static;
+    cursor: pointer;
+}
+
+.popover {
+    outline: none;
+    fill: none;
+    /* background: #fff; */
+    background-color: transparent;
+    outline-style: none;
+    border: none;
+    border-style: none;
+}

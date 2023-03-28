@@ -1,0 +1,139 @@
+
+
+.login-page {
+    margin: 0 !important;
+}
+
+.login-logo {
+    
+    margin-top: 10px !important;
+    margin-left: 100px;
+    padding: 0;
+    width: 135px;
+}
+
+.login-form {
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 25px;
+    border-radius: 5px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.login-title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    font-weight: 350;
+    padding: 10px;;
+}
+
+.login-form > form > label > input  { 
+    width: 352px;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+
+.login-form > form > label > p  { 
+    color:gray;
+    font-size: 15px;
+}
+
+.login-form > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form > form > button {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background-color: #0A66C2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+
+.login-form > form > button:hover {
+    cursor: pointer;
+    background-color: #074079;
+}
+
+.terms {
+    text-align: center !important;
+    text-justify: inter-word !important;
+    font-size: 14px !important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 352px;
+    font-weight: 400 !important;
+}
+
+.terms >  a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+.sign-in {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sign-in > a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.input-control input:focus{
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: blue;
+    font-size: 12px;
+    border: 1px solid blue;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .swal-modal {
+    background-color: rgba(255,255,255);
+    /* border: 3px solid white; */
+  }
