@@ -12,16 +12,16 @@ This is a LinkedIn clone built with React, Redux, Firebase, and MaterialUI. The 
 # Installation
 To run this project locally, follow these steps:
 
-Clone the repository to your local machine.
-Install dependencies using npm install.
-Create a new Firebase project and set up authentication and Firestore database.
-Copy the Firebase configuration keys into the firebase.js file.
-Run npm start to start the development server.
+- Clone the repository to your local machine.
+- Install dependencies using npm install.
+- Create a new Firebase project and set up authentication and Firestore database.
+- Copy the Firebase configuration keys into the firebase.js file.
+- Run npm start to start the development server.
 
 # Usage
 Once the development server is running, navigate to http://localhost:3000 in your web browser to access the LinkedIn clone. You can sign up for a new account, log in with an existing account, and begin using the app.
 
-#Contributing
+# Contributing
 Contributions are welcome and encouraged! If you'd like to contribute to this project, please follow these steps:
 
 1. Fork the repository to your own GitHub account.
